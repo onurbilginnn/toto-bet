@@ -1,0 +1,60 @@
+<div class="filter__items">
+  <h4 class="filter__item filter__item-title">FİLTRELER:</h4>
+  <div
+    *ngFor="let item of filterQty; let i = index"
+    class="filter__item filter__item-div{{ i + 1 }} filter__entry"
+  >
+  <div class="filter__item filter__item-label{{i+1}}">
+      <label
+       name="matchName"
+       id="matchName"
+        #matchName>{{matchInfo.adjMatchArr[i + filterStartNumber - 1]}}</label>
+    </div>
+    <select
+      class="filter__item filter__item-select{{ i + 1 }}"
+      name="filtreOptSelect"
+      id="filtreOptSelect"
+      #filtreOptSelect
+      [disabled] = "isDisabled"
+    >
+      <option>1</option>
+      <option>0</option>
+      <option>2</option>
+      <option>10</option>
+      <option>20</option>
+      <option>21</option>
+      <option selected>102</option>
+    </select>
+  </div>
+</div>
+<div class="btn-group"
+id="allBtns"
+name="allBtns"
+#allBtns
+>
+  <button class="btn-clear"
+   (click)="clearFilter()"
+   name="clearBtn"
+   id="clearBtn"
+   #clearBtn
+   [hidden] = true>Filtre Sıfırla</button>
+   <button class="btn-calc"
+   name="calcBtn"
+   id="calcBtn"
+   #calcBtn
+   (click)="calcCoupons()"
+   [hidden] = true>Hesapla</button>
+   <button class="btn-filter"
+   name="filterBtn"
+   id="filterBtn"
+   #filterBtn
+   (click)="filterCoupons()"
+   [hidden] = true>Filtrele</button>
+</div>
+<div class="warning"
+id="warning"
+name="warning"
+#warning>
+  <span>MAÇ SONUCU SEÇ</span>
+</div>
+

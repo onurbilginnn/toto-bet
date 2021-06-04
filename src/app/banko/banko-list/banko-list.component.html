@@ -1,0 +1,25 @@
+<div class="col-list">
+  <div class="col-list col-list__items-title">
+  <h3 class="col-list col-list__items-title">Kolon Listesi</h3>
+  <div class="col-list col-list__items-title col-qty">
+    <label>Kolon Adedi:</label>
+    <span>{{this.gameList.colQty}}</span>
+  </div>
+  <div class="col-list col-list__items-title total-price">
+      <label>Toplam Tutar:</label>
+      <span>{{this.gameList.totalPrice}}</span>
+    </div>
+  </div>
+  <div class="btn-group col-list__btn-group"
+  [ngStyle]="{display: display}">
+    <button
+     class="btn-send"
+     (click) = excel()
+    [disabled]="isDisabled"
+    [hidden]="isHidden">Excel</button>
+    <span
+     style="background-color: red; color: white"
+      class=""
+      [hidden]="!isHidden">Filtre Yapınız...</span>
+  </div>
+</div>

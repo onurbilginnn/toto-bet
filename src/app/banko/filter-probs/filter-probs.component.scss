@@ -1,0 +1,22 @@
+.filter__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+
+  .filter__item,
+  .filter__item label {
+  padding: 0.3rem;
+  align-self: center;
+  }
+
+  .filter__entry {
+    border: 1px black solid;
+  }
+
+  .warning {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center
+  }

@@ -1,0 +1,27 @@
+.banko__items {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-content: center
+}
+
+.banko__item,
+.banko__item label {
+padding: 0.3rem;
+align-self: center;
+}
+
+.banko__item-match-qty {
+background-color: rgb(0, 141, 7);
+color: white;
+margin-left: auto;
+}
+
+.banko__entry {
+  border: 1px black solid;
+}
+
+
+
+
+

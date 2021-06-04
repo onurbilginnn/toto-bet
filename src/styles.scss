@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+$primary-font-color: azure;
+$font-hover: rgb(168, 167, 167);
+
+html {
+  margin-top: 3.5rem
+
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem
+
+}
+
+
+input,
+select {
+  width: 3.6rem;
+  height: 2.5rem;
+  font-size: 1.2rem
+}
+
+a {
+  color: $primary-font-color;
+  text-decoration: none;
+
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  font-size: 1.2rem;
+  color: $primary-font-color;
+  cursor: pointer;
+}
+
+
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+
+  }
+
+  .btn-clear {
+    background-color: rgb(170, 29, 29);
+  }
+  .btn-calc {
+    background-color: rgb(14, 11, 197);
+  }
+.btn-send {
+  background-color: rgb(12, 122, 2);
+}
+
+.btn-filter {
+  background-color: rgb(156, 77, 3);
+
+}
+
+  button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+hr.black {
+  border: .5px solid black;
+}
+#matchName {
+  width: 18rem
+}
+

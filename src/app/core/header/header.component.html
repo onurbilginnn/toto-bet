@@ -1,0 +1,74 @@
+
+  <body>
+    <div class="navbar">
+        <a class="navbar__item title"
+        [routerLink]="['/']"
+        >
+          TOTO
+        </a>
+        <div class="navbar__item navbar__item-a-links">
+          <a class="navbar__item navbar__item-a-link"
+          [routerLink]="['/oyun']"
+          routerLinkActive="active-link"
+          >Oyna</a>
+          <a class="navbar__item navbar__item-a-link"
+          [routerLink]="['/mac-giris']"
+          routerLinkActive="active-link"
+          >Maçları Gir</a>
+        </div>
+        <div class="navbar__item week-no">
+          <label class="navbar__item--label">Hafta:</label>
+          <span class="navbar__item--span"
+          id="weekNo"
+          name="weekNo"
+          #weekNo
+          ></span>
+        </div>
+          <div class="navbar__item three-probs">
+              <label class="navbar__item--label">Üç İhtimal Adedi:</label>
+              <span class="navbar__item--span"
+              id="tripleSelectQty"
+              name="tripleSelectQty"
+              #tripleSelectQty
+              ></span>
+            </div>
+            <div class="navbar__item two-probs">
+                <label class="navbar__item--label">İki İhtimal Adedi:</label>
+                <span class="navbar__item--span"
+                name="doubleSelectQty"
+                id="doubleSelectQty"
+              #doubleSelectQty
+                ></span>
+              </div>
+              <div class="navbar__item col-qty">
+                  <label class="navbar__item--label col-qty">Kolon Sa:</label>
+                  <span class="navbar__item--span col-qty"
+                  name="colTotal"
+                  id="colTotal"
+                  #colTotal
+                  ></span>
+                </div>
+                <div class="navbar__item min-price">
+                    <label class="navbar__item--label min-price">Kupon Baz Fiyatı:</label>
+                    <input type="number"
+                    class="navbar__item--input-min-price"
+                    value=""
+                    name="couponMinPrice"
+                    id="couponMinPrice"
+                    (change)="changeCouponMinPrice($event)"
+                    #couponMinPrice
+                    >
+                  </div>
+        <div class="navbar__item total-price">
+            <label class="navbar__item--label total-price">Tutar TL:</label>
+            <span class="navbar__item--span total-price"
+            name="totalPrice"
+            id="totalPrice"
+            #totalPrice
+            ></span>
+          </div>
+    </div>
+  </body>
+
+
+

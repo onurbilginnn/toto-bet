@@ -1,0 +1,42 @@
+.match-list__item {
+  display: flex;
+  align-items: center;
+  margin: .2rem;
+
+}
+
+.match-list__item-date{
+flex-direction: row;
+.match-list__item-year{
+  margin-right: 10px;
+  background-color: burlywood;
+}
+}
+
+.grid {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.grid > span {
+  padding: 8px 4px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.match-list__item-list {
+  width: 50%;
+  .match-no,
+  .match-result {
+    width: 19%;
+    text-align: center;
+  }
+  .match-name {
+    width: 58%;
+    margin: 0  15px 0 15px;
+  }
+}
+

@@ -1,0 +1,62 @@
+
+body {margin:0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgb(95, 95, 95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  color: white;
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+}
+
+.navbar__item {
+  align-self: center;
+  padding: .5rem;
+}
+
+.title {
+ margin-right: auto;
+font-weight: bold
+}
+
+.navbar__item-a-link {
+  background-color: rgb(201, 201, 201);
+  color: black;
+  margin-right: 10px;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.navbar__item--label,
+.navbar__item--span {
+
+  padding: 0.5rem 1rem;
+}
+
+.total-price {
+  background-color: rgb(206, 112, 6);
+}
+
+.col-qty {
+  background-color: rgb(47, 146, 1);
+
+}
+
+.active-link {
+  background-color:black;
+  color: white;
+
+}
+
+.week-no {
+  background-color: brown
+}

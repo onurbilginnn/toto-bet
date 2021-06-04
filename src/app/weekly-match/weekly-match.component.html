@@ -1,0 +1,69 @@
+<form (ngSubmit)="sendData(matchForm)" #matchForm="ngForm">
+    <div class="match-list">
+        <div class="match-list__items">
+          <div class="match-list__item match-list__item-date match-list__item-btn">
+            <div class="match-list__item match-list__item-year">
+              <label class="match-list__item match-list__item-year-label">Yıl:</label>
+              <input class=" match-list__item match-list__item-year-span"
+              type="number"
+              name="year"
+              id="year"
+              #year
+              [(ngModel)]="dateNow"
+              required
+              pattern="^[1-9]+[0-9]*$"
+              />
+            </div>
+            <div class="match-list__item match-list__item-week">
+              <label class="match-list__item match-list__item-week-label"
+                >Hafta:</label
+              >
+              <input
+                class=" match-list__item match-list__item-week-span"
+                type="number" value="30"
+                name="weekNo"
+                id="weekNo"
+                #weekNo
+                ngModel
+                required
+                pattern="^[1-9]+[0-9]*$"
+              />
+            </div>
+            <div class="match-list__item btn-group">
+              <button
+              type="submit"
+              class="match-list__item btn-send"
+              [disabled]="!matchForm.valid"
+              >Gönder</button>
+            </div>
+          </div>
+          <div class="match-list__item grid">
+              <span style="text-align: center"><strong>Maç No</strong></span>
+              <span><strong>Maç İsmi</strong></span>
+              <span><strong>Sonuç</strong></span>
+          </div>
+          <div *ngFor="let item of matchQty;let i = index" class="match-list__item match-list__item-list">
+            <label class="match-no match-no{{i+1}}">{{i+1}}.</label>
+            <input
+             class="match-name match-name"
+              type="text"
+              id="matchName{{i+1}}"
+              name="matchName{{i+1}}"
+              #matchName{{i+1}}
+              ngModel
+              required
+              >
+            <input
+             class="match-result match-result{{i+1}}"
+              type="number"
+              id="matchResult{{i+1}}"
+              name="matchResult{{i+1}}"
+              #matchResult{{i+1}}
+              ngModel
+              >
+          </div>
+
+        </div>
+      </div>
+</form>
+

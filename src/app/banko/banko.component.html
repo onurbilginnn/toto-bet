@@ -1,0 +1,57 @@
+
+    <div class="banko__items"
+    name="bankoItems"
+    id="bankoItems"
+    #bankoItems>
+        <h4 class="banko__item banko__item-title">BANKO GİRİŞ:</h4>
+        <div *ngFor="let item of bankoInputArr; let i = index"
+         class="banko__item banko__item-div{{i+1}} banko__entry"
+        >
+          <div class="banko__item banko__item-label{{i+1}}">
+            <select
+             name="matchName"
+             id="matchName"
+              #matchName
+              (change)="changeValues()">
+            <option
+            *ngFor="let item of matchInfo.orgMatchArr; let j = index"
+             value="{{item}}"
+             [selected] = "item === matchInfo.adjMatchArr[i]">{{item}}</option>
+          </select>
+          </div>
+          <select class="banko__item banko__item-select{{i+1}}"
+          (change)="gameSelect()"
+          name="bankoOptSelect"
+          #bankoOptSelect>
+            <option>1</option>
+            <option selected>0</option>
+            <option>2</option>
+            <option>10</option>
+            <option>20</option>
+            <option>21</option>
+            <option>102</option>
+          </select>
+        </div>
+        <h5 class="banko__item banko__item-match-qty">Maç Sayısı:
+            <select (change)="selectChange($event)"
+             class="banko__item banko__item-match-qty__select"
+             name="matchQtySelect"
+             id="matchQtySelect"
+             #matchQtySelect>
+                <option *ngFor="let qty of matchQty">{{qty}}</option>
+              </select>
+        </h5>
+        </div>
+        <div class="btn-group">
+        <button class="btn-clear"
+         (click)="clearBanko()"
+         #clearBtn
+         [hidden]="true">Banko Sıfırla</button>
+      </div>
+
+      <hr class="black">
+      <app-filter-probs></app-filter-probs>
+      <hr class="black">
+      <app-banko-list
+       [playedMatchQty]="selectedMatchQty"
+       [oneColPrice]="oneColPrice"></app-banko-list>
